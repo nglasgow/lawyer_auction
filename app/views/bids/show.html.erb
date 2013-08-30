@@ -1,0 +1,21 @@
+
+<span id='author'>Created by <%== bid.user.email %></span>
+<div id='bid'>
+  <h2><%= @bid.final_bid %></h2>
+  <%= simple_format(@bid.preliminary_advice) %>
+
+<ul id='bids'>
+  <% @legal_request.bids.each do |bid| %>
+    <li>
+      #<%= bid.id %> -
+      <%= link_to bid.final_bid, [@legal_request, bid] %>
+    </li>
+  <% end %>
+</ul>
+
+<%= link_to "Edit Bid", [:edit, @legal_request, @bid] %>
+<%= link_to "Delete Bid", [@legal_request, @bid], method: :delete,
+    confirm: "Are you sure you want to delete this bid?" %>
+
+
+<%= link_to "Back to Legal Request", legal_request_path %>

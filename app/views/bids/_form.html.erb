@@ -1,0 +1,12 @@
+<%= form_for(@legal_request, @bid) do |f| %>
+<%= f.error_messages %>
+  <p>
+    <%= f.label :final_bid %>
+    <%= f.text_field :final_bid %>
+  </p>
+
+  <p>
+    <%= f.label :preliminary_advice %>
+    <%= f.text_field :preliminary_advice %>
+  <%= f.submit %>
+<% end %>

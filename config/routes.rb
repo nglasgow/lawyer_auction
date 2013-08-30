@@ -1,4 +1,11 @@
 LawyerAuction::Application.routes.draw do
+  devise_for :users
+
+  root :to => "legal_requests#index"
+    resources :legal_requests do
+      resources :bids
+    end
+
   # The priority is based upon order of creation:
   # first created -> highest priority.
 

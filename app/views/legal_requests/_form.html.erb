@@ -1,0 +1,13 @@
+
+<%= form_for(@legal_request) do |f| %>
+<%= f.error_messages %>
+  <p>
+    <%= f.label :legal_issue %>
+    <%= f.text_field :legal_issue %>
+  </p>
+
+  <p>
+    <%= f.label :description %>
+    <%= f.text_field :description %>
+  <%= f.submit %>
+<% end %>

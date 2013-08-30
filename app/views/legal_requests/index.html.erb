@@ -1,0 +1,8 @@
+<%= link_to "New Legal Request", new_legal_request_path %>
+
+<h2>Lawyer Auction</h2>
+<ul>
+  <% @legal_requests.each do |legal_request| %>
+    <li><%= link_to legal_request.legal_issue, legal_request %></li>
+  <% end %>
+</ul>
