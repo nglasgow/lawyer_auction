@@ -1,4 +1,5 @@
 class BidsController < ApplicationController
+load_and_authorize_resource nested: :legal_request
 before_filter :authenticate_user!, except: [:index, :show]
 before_filter :find_auction
 before_filter :find_bid, only: [:show, :edit, :update, :destroy]

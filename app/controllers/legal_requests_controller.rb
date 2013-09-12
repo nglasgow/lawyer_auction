@@ -1,4 +1,5 @@
 class LegalRequestsController < ApplicationController
+load_and_authorize_resource
 # before_filter :authenticate_patient!, except: [:index, :show]
 before_filter :find_legal_request, only: [:show, :edit, :update, :destroy]
 

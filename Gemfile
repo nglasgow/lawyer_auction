@@ -3,6 +3,8 @@ source 'https://rubygems.org'
 gem 'rails', '3.2.13'
 gem 'devise', '2.1.0'
 gem 'dynamic_form', '1.1.4'
+gem 'cancan'
+gem 'rolify'
 
 # Bundle edge Rails instead:
 # gem 'rails', :git => 'git://github.com/rails/rails.git'
